@@ -32,7 +32,7 @@ Let's take a look at the pressure results behind the prop at t=2s. For a better 
 The velocity componentent moving the boat is obviously Uz, let's visualize it:
 ![Uz_t2](https://github.com/user-attachments/assets/9b2b600a-a2b5-4842-9b0b-3d094506b004)
 
-It's obvious, we need to give it more simulation time, but the results are more than satisfactory. So far we are getting around 4m/s with omega = 50rpm. In the repo, also a video of Uz over the whole 2s is shown.
+It's obvious, we need to give it more simulation time than 2 seconds, but the results are more than satisfactory. So far we are getting around 4m/s 1m behind the prop with omega = 50rpm. In the repo, also a video of Uz over the whole 2s is shown.
 
 
 
