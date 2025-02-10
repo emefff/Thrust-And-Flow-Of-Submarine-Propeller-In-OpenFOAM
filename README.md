@@ -17,8 +17,17 @@ The geometry of the boat is a simplified version of an existing boat, propeller 
 
 As always, the result could be better, but still around 50 iterations of the mesh were needed to make the simulation work. In total, this mesh has aorund 3.6M cells. We think a lower cell count is probably not possible with the given parameters. The turning speed of the propeller was set at a constant 50rpm (5.236 rad/s). We use a transient simulation with pimpleFoam, this allows us to judge and see the development of the flow behind the turning propeller. Full simulation time is 2s, that is 1.66 rotations of the screw. At t=2s we still find that the flow behind the boat is not fully developed, so we still have to add a few revolutions, perhaps around 5 are enough. With deltaT = 1e-4s and writeInterval = 0.01s around 400GB of data are generated. One timeStep took about 11s, thus 20000 iterations in total took around 61 hours on 24 cores. OpenFOAM allows for calculating the forces and moment on the propeller patch, we can directly use these data for thrust and power calculations. In principle, the forces on the hull may be calculated in similar fashion directly in OpenFOAM to estimate the drag of the boat itself. Let's take a look at the basic setup and the stls used:
 
-Overview of model for simualtion, inlet is at the left-hand side, outlet at the right:
+Overview of model for simualtion, inlet is at the left-hand side, outlet at the right (walls, inlet and outlet are set to transparent):
 ![Bildschirmfoto vom 2025-02-10 09-14-43](https://github.com/user-attachments/assets/762b047c-20b9-4457-8052-8d0411ee42d4)
 
 Detail of propeller, diffuser and simplified rudders:
 ![Bildschirmfoto vom 2025-02-10 09-15-19](https://github.com/user-attachments/assets/77645da3-f229-4771-9541-a61d0cf5d6eb)
+
+The inlet velocity is set to 1m/s to have some flow, the outlet is at constant pressure. A slice through the mesh in the interesting regions is shown below (basic mesh without boundary layers to keep it simple):
+![Bildschirmfoto vom 2025-02-10 09-20-30](https://github.com/user-attachments/assets/f6c2545d-48da-4134-958e-4cdfa99fbe44)
+
+Let's look at the velocity Uz at t=2s behind the boat, this is the component moving the boat:
+![Uz_t2](https://github.com/user-attachments/assets/9b2b600a-a2b5-4842-9b0b-3d094506b004)
+
+It's obvious, we need to give it more simulation time, but the results are more than satisfactory. 
+
