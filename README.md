@@ -11,9 +11,9 @@ The geometry of the boat is a simplified version of an existing boat, propeller 
 
 -) we need some detail on the edges of the boat
 
--) we need some detail before and after the AMI (like when sieving we need to get finer and finer, but have to allow some cells in every refinement step)
+-) we need some detail before and after the AMI (like when sieving we need to get finer and finer coming from the coarse mesh, but have to allow some cells in every refinement step)
 
 -) we have to stay away with the rotating geometry/patch from the borders of the AMI 
 
-As always, the result could be better, but still around 50 iterations of the mesh were needed to make the simulation work. 
+As always, the result could be better, but still around 50 iterations of the mesh were needed to make the simulation work. In total, this mesh has aorund 3.6M cells. We think a lower cell count is probably not possible with the given parameters. The turning speed of the propeller was set at a constant 50rpm (5.236 rad/s). We use a transient simulation with pimpleFoam, this allows us to judge and see the development of the flow behind the turning propeller. Full simulation time is 2s, that is 1.66 rotations of the screw. At t=2s we still find that the flow behind the boat is not fully developed, so we still have to add a few revolutions, perhaps around 5 are enough.
 
