@@ -26,8 +26,13 @@ Detail of propeller, diffuser and simplified rudders:
 The inlet velocity is set to 1m/s to have some flow, the outlet is at constant pressure. A slice through the mesh in the interesting regions is shown below (basic mesh without boundary layers to keep it simple):
 ![Bildschirmfoto vom 2025-02-10 09-20-30](https://github.com/user-attachments/assets/f6c2545d-48da-4134-958e-4cdfa99fbe44)
 
-Let's look at the velocity Uz at t=2s behind the boat, this is the component moving the boat:
+Let's take a look at the pressure results behind the prop at t=2s. For a better understanding the boat is also shown:
+![U_mag_stream_p_slices_t2](https://github.com/user-attachments/assets/1cdae970-b23d-4997-9083-122e7e3febf1)
+
+The velocity componentent moving the boat is obviously Uz, let's visualize it:
 ![Uz_t2](https://github.com/user-attachments/assets/9b2b600a-a2b5-4842-9b0b-3d094506b004)
 
-It's obvious, we need to give it more simulation time, but the results are more than satisfactory. 
+It's obvious, we need to give it more simulation time, but the results are more than satisfactory. So far we are getting around 4m/s with omega = 50rpm. In the repo, also a video of Uz over the whole 2s is shown.
+
+
 
