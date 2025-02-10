@@ -34,5 +34,6 @@ The velocity componentent moving the boat is obviously Uz, let's visualize it:
 
 It's obvious, we need to give it more simulation time than 2 seconds, but the results are more than satisfactory. So far we are getting around 4m/s 1m behind the prop with omega = 50rpm. In the repo, also a video of Uz over the whole 2s is shown.
 
+With the data generated in forces.dat and momment.dat we may generate curves, that show a convergence to values representing the thrust force we're interested in at omega = 50rpm. A short Python script for visualization these data is attached. Of course, We may also use foamMonitor for this:
 
 
