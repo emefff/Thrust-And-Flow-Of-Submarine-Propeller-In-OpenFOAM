@@ -37,6 +37,6 @@ It's obvious, we need to give it more simulation time than 2 seconds, but the re
 With the data generated in forces.dat and momment.dat we may generate curves, that show a convergence to values representing the thrust force we're interested in at omega = 50rpm. A short Python script for visualization these data is attached. Of course, We may also use foamMonitor for this:
 ![Bildschirmfoto vom 2025-02-10 10-09-40](https://github.com/user-attachments/assets/d9ee17d1-17cd-4516-b358-49a9bac851ae)
 
-At t= 2s we find approx. 201kN of thrust created by the propeller. In the diagram, we obvisously also find the mentioned interruptions of the simulation, with going back a few timeSteps and starting over again.
+At t= 2s we find approx. 201kN of thrust created by the propeller. In the diagram, we obvisously also find the mentioned interruptions of the simulation, with going back a few timeSteps and starting over again. In the beginning, forces are higher because more water has to be moved/accelerated, just like more power is needed when accelerating a car from standstill. 
 
 
