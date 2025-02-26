@@ -29,7 +29,7 @@ The inlet velocity is set to 1m/s to have some flow, the outlet is at constant p
 Let's take a look at the pressure results behind the prop at t=2s. For a better understanding the boat is also shown:
 ![U_mag_stream_p_slices_t2](https://github.com/user-attachments/assets/1cdae970-b23d-4997-9083-122e7e3febf1)
 
-The velocity componentent moving the boat is obviously Uz, let's visualize it:
+The velocity component driving the boat is obviously Uz, let's visualize it:
 ![Uz_t2](https://github.com/user-attachments/assets/9b2b600a-a2b5-4842-9b0b-3d094506b004)
 
 So far we are getting around 5m/s 1m behind the prop with omega = 50rpm. In the repo, also a video of Uz over the whole 4s is shown.
